@@ -5,4 +5,12 @@ Mystery Case Files: Agent X is a Hidden Object game released on April 14th, 2008
 There is no active link for purchasing the full version of this game. The shops hosting this game have been dead for years, and there is **NO** way to directly support the creators. I DO NOT intend on infringing the laws, regulations, and copyright of the respective copyright owners. This project is for education use and contributes to the growing effort of preserving lost mobile games.
 
 # Instructions
-TODO
+## Requirements
+```
+jar >= 11.0.20.1
+```
+## Usage
+```
+./script.sh <path_to_Agent_X_jar>
+```
+The script will output a modified `.jar` file in the current directory with all restrictions removed.
