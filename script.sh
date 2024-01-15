@@ -1,12 +1,18 @@
 if [[ $# -lt 1 ]]
 then
-	echo "Failed"
+	echo "USAGE: ./script.sh <path_to_Agent_X_jar>"
 else
 	filename=$1
-	echo $filename
-	mkdir ./tmp
-	cp $filename ./tmp
-	cd ./tmp
+	if ! [ -f $filename ]; then
+	       echo "File $filename does not exist"
+	       exit 1
+	fi
+	if [ -d ./tempFiles ]; then
+		rm -rf ./tempFiles
+	fi	
+	mkdir ./tempFiles
+	cp $filename ./tempFiles
+	cd ./tempFiles
 	jar xvf $filename
 	rm k.class
 	ls ../
